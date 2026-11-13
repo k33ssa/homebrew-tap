@@ -12,16 +12,18 @@ cask "simplescreentab" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "SimpleScreenTab.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/SimpleScreenTab.app"]
-    system_command "/usr/bin/open", args: ["#{appdir}/SimpleScreenTab.app"]
-  end
-
   uninstall quit:       "local.simplescreentab",
             login_item: "SimpleScreenTab"
+
+  caveats <<~EOS
+    Open SimpleScreenTab once and allow Accessibility when macOS asks.
+    It then starts at login and replaces Cmd-Tab with a per-monitor switcher.
+
+    The app is free and not notarized. If macOS refuses to open it, run:
+      xattr -dr com.apple.quarantine #{appdir}/SimpleScreenTab.app
+  EOS
 end
