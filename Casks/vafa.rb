@@ -1,6 +1,6 @@
 cask "vafa" do
-  version "1.0.0"
-  sha256 "007466003d9e4ff1fea5b2395913d45b76dddcf8f4f76751950628f855bf43ee"
+  version "1.0.1"
+  sha256 "fabf1a3e0f7a4f729fa1b1feb25811b69a0cde852db7238810c328676ed1ca93"
 
   url "https://github.com/k33ssa/vafa/releases/download/v#{version}/Vafa-#{version}.dmg"
   name "Vafa"
@@ -23,7 +23,7 @@ cask "vafa" do
             quit:      "local.vafa.menu",
             script:    {
               executable: "/usr/local/bin/vpn-guard",
-              args:       ["uninstall"],
+              args:       ["uninstall-deferred"],
               sudo:       true,
             },
             delete:    "/Applications/Vafa.app"
