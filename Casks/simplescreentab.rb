@@ -1,6 +1,6 @@
 cask "simplescreentab" do
-  version "1.2.0"
-  sha256 "aba40e3dd869f74733d20fbff3efc16073cddbf3dd082e5d9eb07afa5be3a6e1"
+  version "1.3.0"
+  sha256 "94590c3f25b21f579911916dbad447965dcab8348e08e7a0c76bcfb5d26cf421"
 
   url "https://github.com/k33ssa/SimpleScreenTab/releases/download/v#{version}/SimpleScreenTab-#{version}.zip"
   name "SimpleScreenTab"
