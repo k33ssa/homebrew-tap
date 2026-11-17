@@ -1,6 +1,6 @@
 cask "vafa" do
-  version "1.0.5"
-  sha256 "41addb9636e3319fcc838d7f16d68ecdf92f2853dbec34a086c8735920c37e39"
+  version "1.0.6"
+  sha256 "3537aeeff63c97c0d047c33ed76e0a55be26c513b6369471a9ccfb64a4d6e57c"
 
   url "https://github.com/k33ssa/vafa/releases/download/v#{version}/Vafa-#{version}.dmg"
   name "Vafa"
